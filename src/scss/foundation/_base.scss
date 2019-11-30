@@ -1,0 +1,61 @@
+html {
+	color: $txt;
+	font-size: 62.5%;
+	font-family: $base-font;
+}
+
+body {
+	background: $white;
+	min-width: 320px;
+	font-size: 1.6rem;
+	@include media(l) {
+		font-size: 1.6rem;
+	}
+	@include media(m) {
+		font-size: 1.4rem;
+	}
+	@include media(s) {
+		font-size: 1.3rem;
+	}
+}
+h1,h2,h3,h4,h5,h5 {
+	font-size: 1em;
+	font-weight: inherit;
+}
+p{
+	line-height: 1.8;
+}
+a,
+a:visited {
+	color: $txt;
+	text-decoration: none;
+	outline: none;
+}
+a {
+	transition: .6s $ease-out-expo;
+	display: block;
+}
+a:hover {
+	transition: .6s $ease-out-expo;
+	outline: none;
+}
+ul,
+li {
+	list-style: none;
+}
+i {
+	font-style: normal;
+}
+em {
+	font-style: normal;
+}
+img {
+	vertical-align: bottom;
+	max-width: 100%;
+}
+table {
+	border-collapse: collapse;
+}
+*::selection {
+	color: $white;
+}

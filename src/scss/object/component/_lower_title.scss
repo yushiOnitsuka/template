@@ -1,0 +1,47 @@
+.c-lower_title--01{
+    border-bottom: solid 1px $main;
+    padding-bottom: 24px;
+    font-size: 3.2rem;
+    @include media(m) {
+        font-size: 2.0rem;
+    }
+}
+
+
+.c-lower_title--02{
+    font-size: 2.4rem;
+    padding-bottom: 8px;
+    border-bottom: solid 1px $border;
+    position: relative;
+    @include media(m) {
+        font-size: 1.6rem;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        bottom: -1px;
+        left: 0;
+        width: 80px;
+        height: 1px;
+        background: $main;
+    }
+}
+
+.c-lower_title--03{
+    font-size: 2.0rem;
+    padding-left: 24px;
+    position: relative;
+    @include media(m) {
+        font-size: 1.5rem;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        top: 8px;
+        left: 0;
+        margin: auto;
+        width: 12px;
+        height: 12px;
+        background: $main;
+    }
+}

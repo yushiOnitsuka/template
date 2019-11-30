@@ -1,0 +1,186 @@
+//btn animation01
+
+.c-btn--01 a{
+    color: $white;
+    font-size: 1.8rem;
+    background: $key;
+    position: relative;
+    border: solid 1px $key;
+    @include media(m) {
+        font-size: 1.4rem;
+    }
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 32px;
+        bottom: 0;
+        width: 9px;
+        height: 9px;
+        margin: auto;
+        transform: rotate(45deg);
+        border-top: 2px solid $white;
+        border-right: 2px solid $white;
+        content: '';
+        transition: .6s $ease-out-expo;
+    }
+    &:hover{
+        color: $key;
+        background: $white;
+        &:before {
+            right: 24px;
+            border-top: 2px solid $key;
+            border-right: 2px solid $key;
+            transition: .6s $ease-out-expo;
+        }
+    }
+}
+
+.c-btn--02 a{
+    color: $white;
+    width: 100%;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, $key 0%, #a10023 51%, $key 100%);
+    transition: .6s $ease-out-expo;
+    &:hover{
+        background-position: right center;
+        transition: .6s $ease-out-expo;
+    }
+}
+
+.c-btn--03 a{
+    color: $key;
+    background: $white;
+    border: solid 1px $key;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: $key;
+        transition: .6s $ease-out-expo;
+    }
+    span{
+        position: relative;
+    }
+    &:hover{
+        color: $white;
+        &:before {
+            width: 100%;
+            right: auto;
+            left: 0;
+            transition: .6s $ease-out-expo;
+        }
+    }
+}
+
+.c-btn--04 a{
+    span{
+        background: linear-gradient($key, $key) 0 100%/0 1px no-repeat;
+        transition: .6s $ease-out-expo;
+    }
+    &:hover span {
+        background-size: 100% 1px;
+        transition: .6s $ease-out-expo;
+    }
+}
+
+.c-btn--05 a{
+    span{
+        border-bottom: solid 1px $border;
+        transition: .6s $ease-out-expo;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 100%;
+            bottom: -1px;
+            right: 0;
+            margin: auto;
+            background: linear-gradient($key, $key) 0 100%/0 1px no-repeat;
+            transition: .6s $ease-out-expo;
+        }
+    }
+    &:hover span:before {
+        background-size: 100% 1px;
+        transition: .6s $ease-out-expo;
+    }
+}
+
+
+.c-btn--06{
+    display: flex;
+    align-items: center;
+    a{
+        color: $key;
+        background: $white;
+        border: solid 1px $key;
+        position: relative;
+        width: 90%;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: auto;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background-color: $key;
+            transition: .6s $ease-out-expo;
+        }
+        &:hover{
+            color: $white;
+            &:before {
+                width: 100%;
+                right: auto;
+                left: 0;
+                transition: .6s $ease-out-expo;
+            }
+            + span{
+                &:before {
+                    left: 0;
+                    transition: .6s $ease-out-expo;
+                }
+                &:after {
+                    right: -56px;
+                    transition: .6s $ease-out-expo;
+                }
+            }
+        }
+        span{
+            position: relative;
+        }
+    }
+    > span{
+        position: relative;
+        //矢印
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -28px;
+            margin: auto;
+            width: 56px;
+            height: 2px;
+            transition: .6s $ease-out-expo;
+            background: $key;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            right: -28px;
+            margin: auto;
+            width: 14px;
+            height: 2px;
+            transform: rotate(45deg);
+            transition: .6s $ease-out-expo;
+            background: $key;
+        }
+    }
+}

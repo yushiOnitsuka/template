@@ -1,0 +1,95 @@
+
+//fadein
+
+.js-fadein{
+    transform: translateY(16px);
+    opacity: 0;
+    &.is-active{
+        transform: translateY(0);
+        opacity: 1;
+        transition: .6s $ease-out-expo;
+    }
+}
+
+//fadein_continuous
+
+.js-fadein_continuous > li{
+    opacity: 0;
+}
+.js-fadein_continuous.is-active > li{
+    animation: fadein_continuous 2s $ease-out-expo forwards;
+}
+.js-fadein_continuous.is-active{
+    > li{
+        animation: fadein_continuous 2s $ease-out-expo forwards;
+        @for $fadein_continuous from 1 through 100 {
+            &:nth-of-type(#{$fadein_continuous}){
+                animation-delay: calc((#{$fadein_continuous} - 1) * .2s);
+            }
+        }
+    }
+}
+@keyframes fadein_continuous{
+    0%{opacity: 0; transform: translateY(32px);}
+    100%{opacity: 1; transform: translateY(0);}
+}
+
+
+//slidein
+
+.js-slidein-right,
+.js-slidein-left{
+    overflow: hidden;
+}
+.js-slidein-right > *{
+    transform: translateX(100%);
+}
+.js-slidein-left > *{
+    transform: translateX(-100%);
+}
+.js-slidein-right.is-active > * {
+    animation: play-right .8s forwards $ease-out-expo;
+    position: relative;
+}
+.js-slidein-left.is-active > * {
+    animation: play-left .8s forwards $ease-out-expo;
+    position: relative;
+}
+.js-slidein-right.is-active > *:before {
+    animation: maskOut-right 1s .8s forwards $ease-out-expo;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: $key;
+    width: 100%;
+    height: 100%;
+}
+.js-slidein-left.is-active > *:before {
+    animation: maskOut-left 1s .8s forwards $ease-out-expo;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: $key;
+    width: 100%;
+    height: 100%;
+}
+@keyframes play-right {
+    from { transform: translateX(100%);}
+    to { transform: translateX(0);}
+}
+@keyframes play-left {
+    from { transform: translateX(-100%);}
+    to { transform: translateX(0);}
+}
+@keyframes maskOut-right {
+    from { transform: translateX(0);}
+    to { transform: translateX(-100%);}
+}
+@keyframes maskOut-left {
+    from { transform: translateX(0);}
+    to { transform: translateX(100%);}
+}

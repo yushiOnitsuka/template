@@ -1,0 +1,56 @@
+.l-breadcrumb{
+    padding: 15px 0;
+    border-top: 1px solid $border;
+    font-size: 1.3rem;
+    overflow-x: auto;
+    @include media(m) {
+        font-size: 1.2rem;
+    }
+    &__inner{
+        width: 100%;
+        max-width: 1366px;
+        margin: auto;
+        position: relative;
+        @include media(xl) {
+            width: 90%;
+        }
+    }
+    &__list{
+        display: flex;
+        width: max-content;
+        &__item{
+            a{
+                padding-right: 32px;
+                @include media(m) {
+                    padding-right: 24px;
+                }
+                display: inline-block;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 9px;
+                    height: 9px;
+                    margin: auto;
+                    transform: rotate(45deg);
+                    border-top: 2px solid $key;
+                    border-right: 2px solid $key;
+                    content: '';
+                }
+            }
+            span{
+                padding-left: 21px;
+                display: inline-block;
+                position: relative;
+                @include media(m) {
+                    padding-left: 13px;
+                }
+            }
+            &:first-of-type span{
+                padding-left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.c-accordion {
+    margin-bottom: 10px;
+    &__title {
+        cursor: pointer;
+        padding: 24px;
+        border: solid 1px $main;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 1px;
+            top: 0;
+            right: 24px;
+            bottom: 0;
+            margin: auto;
+            background: $main;
+            border-radius: 5px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 24px;
+            top: 0;
+            right: 35px;
+            bottom: 0;
+            margin: auto;
+            background:  $main;
+            border-radius: 5px;
+            transform: rotate(0);
+            transition: .6s $ease-out-expo;
+        }
+        &.is-open:after {
+            transform: rotate(90deg);
+            transition: .6s $ease-out-expo;
+        }
+    }
+    &__cont{
+        padding: 24px;
+        background: $bg-gray;
+    }
+}
+
+//自動スクロール
+.c-accordion--scroll {
+    margin-bottom: 10px;
+    &__title {
+        cursor: pointer;
+        padding: 24px;
+        border: solid 1px $main;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 1px;
+            top: 0;
+            right: 24px;
+            bottom: 0;
+            margin: auto;
+            background: $main;
+            border-radius: 5px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 24px;
+            top: 0;
+            right: 35px;
+            bottom: 0;
+            margin: auto;
+            background:  $main;
+            border-radius: 5px;
+            transform: rotate(0);
+            transition: .6s $ease-out-expo;
+        }
+        &.is-open:after {
+            transform: rotate(90deg);
+            transition: .6s $ease-out-expo;
+        }
+    }
+    &__cont{
+        padding: 24px;
+        background: $bg-gray;
+    }
+}

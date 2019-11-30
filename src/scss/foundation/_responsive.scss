@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+// 600以上
+.pc-s {
+	display: inherit;
+	@include media(s) {
+		display: none;
+	}
+}
+
+// 768以上
+.pc-m {
+	display: inherit;
+	@include media(m) {
+		display: none;
+	}
+}
+
+// 1024以上
+.pc-l {
+	display: inherit;
+	@include media(l) {
+		display: none;
+	}
+}
+
+// 600以下
+.sp-s {
+	display: none;
+	@include media(s) {
+		display: inherit;
+	}
+}
+
+// 768以下
+.sp-m {
+	display: none;
+	@include media(m) {
+		display: inherit;
+	}
+}
+
+// 1024以下
+.sp-l {
+	display: none;
+	@include media(l) {
+		display: inherit;
+	}
+}

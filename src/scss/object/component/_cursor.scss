@@ -1,0 +1,43 @@
+body{cursor: none;}
+
+.c-cursor,
+.c-cursor--follower {
+    border-radius: 50%;
+    position: absolute;
+    cursor: none;
+    pointer-events: none;
+    position: fixed;
+    z-index: 100;
+}
+.c-cursor{
+    width: 24px;
+    height: 24px;
+    background: $key;
+    border: solid 1px $key;
+}
+
+.is-active{
+    cursor: none;
+    pointer-events: none;
+}
+
+
+.c-cursor--follower{
+    width: 80px;
+    height: 80px;
+    background: $main;
+    opacity: .2;
+    transition: transform .6s $ease-out-expo;
+}
+
+.is-active--follower{
+    transform: scale(2);
+    transition: transform .6s $ease-out-expo;
+}
+
+.js-cursor{
+    cursor: none;
+}
+
+
+

@@ -1,0 +1,54 @@
+.c-tab {
+    &__tab{
+        width: calc(100% / 2);
+        height: 64px;
+        background-color: $bg-gray;
+        line-height: 64px;
+        text-align: center;
+        color: $txt;
+        display: block;
+        transition: .6s $ease-out-expo;
+        cursor: pointer;
+    }
+    &__content{
+        display: none;
+        padding: 80px 0 0;
+        table{
+            border: solid 1px $border;
+            width: 100%;
+            tr{
+                &:first-of-type{
+                    background: $main;
+                    color: $white;
+                }
+            }
+            th,td{
+                text-align: center;
+                padding: 16px 0;
+                border-right: dotted 2px $border;
+                &:last-of-type{
+                    border-right:none;
+                }
+            }
+        }
+    }
+    &__tab.is-active {
+        background-color: $main;
+        position: relative;
+        color: $white;
+        &:before{
+            position: absolute;
+            content: '';
+            bottom: -40px;
+            border: 24px solid transparent;
+            border-top: 16px solid $main;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 24px;
+        }
+    }
+    &__content.is-active{
+        display: block;
+    }
+}

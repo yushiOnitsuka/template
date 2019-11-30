@@ -1,0 +1,45 @@
+.c-list--ul{
+    &__li{
+        position: relative;
+        padding-left: 40px;
+        @include media(m) {
+            padding-left: 32px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 16px;
+            top: 10px;
+            left: 0;
+            margin: auto;
+            background: $key;
+        }
+    }
+}
+.c-list--ol{
+    &__li{
+        position: relative;
+        padding-left: 40px;
+        @include media(m) {
+            padding-left: 32px;
+        }
+        @for $service-list from 1 through 100 {
+            &:nth-of-type(#{$service-list}):before{
+                content: '#{$service-list}.';
+                position: absolute;
+                font-size: 2.0rem;
+                @include media(m) {
+                    font-size: 1.8rem;
+                }
+                font-weight: 500;
+                top: -4px;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                color: $key;
+            }
+        }
+    }
+}
+

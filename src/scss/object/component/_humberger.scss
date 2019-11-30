@@ -1,0 +1,33 @@
+.c-humberger {
+    width: 40px;
+    height: 32px;
+    @include media(m) {
+        width: 32px;
+        height: 24px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+    div {
+        display: block;
+        height: 1px;
+        background: $white;
+    }
+}
+
+.l-header__sp--open .c-humberger{
+    div {
+        height: 2px;
+        transition: .6s $ease-out-expo;
+    }
+    div:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    div:nth-child(2) {
+        display: none;
+    }
+    div:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+}

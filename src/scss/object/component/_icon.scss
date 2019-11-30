@@ -1,0 +1,91 @@
+.c-icon--01{
+    position: relative;
+    width: 24px;
+    height: 16px;
+    border-top: 2px solid $main;
+    border-bottom: 2px solid $main;
+    display: block;
+    &:before {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        content: '';
+        background: $main;
+    }
+}
+
+.c-icon--02{
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 4px;
+        border: solid 1px $main;
+        border-radius: 1px;
+        background-color: $main;
+        box-shadow: 6px 0 0 0 $main, 12px 0 0 0 $main, 0 6px 0 0 $main, 6px 6px 0 0 $main, 12px 6px 0 0 $main, 0px 12px 0 0 $main, 6px 12px 0 0 $main, 12px 12px 0 0 $main;
+    }
+}
+
+
+.c-icon--03{
+    position: relative;
+    border-radius: 50%;
+    background: $main;
+    width: 40px;
+    height: 40px;
+    display: block;
+    &:before {
+        position: absolute;
+        content: '';
+        background: $white;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 2px;
+        height: 16px;
+        border-radius: 1px;
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        background: $white;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 16px;
+        height: 2px;
+        border-radius: 1px;
+    }
+}
+
+.c-icon--04{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: block;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 8px;
+        height: 8px;
+        margin: auto;
+        transform: rotate(45deg);
+        border-top: 2px solid $key;
+        border-right: 2px solid $key;
+        content: '';
+    }
+}

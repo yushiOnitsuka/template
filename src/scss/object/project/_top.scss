@@ -1,0 +1,131 @@
+//mv
+
+.p-mv{
+    position: relative;
+    background: url(../img/mv.jpg) no-repeat;
+    background-size: cover;
+    &__content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        margin: auto;
+        z-index: 2;
+        text-align: center;
+        h2{
+            font-size: 3.0vw;
+            color: $white;
+        }
+        p{
+            color: $white;
+        }
+    }
+}
+
+
+//compornent
+
+article > ul{
+    > li{
+        position: relative;
+        padding: 32px;
+        border: solid 1px $border;
+    }
+}
+
+.c-lower_title{
+    &--01{
+        text-align: center;
+        max-width: 1366px;
+        margin: 120px auto 0;
+    }
+    &--02{
+        margin-bottom: 40px;
+    }
+}
+.p-btn{
+    a{
+        padding: 16px 32px;
+    }
+    div{
+        width: 100%;
+    }
+}
+.p-matchheight{
+    h3{
+        font-size: 4.0rem;
+    }
+}
+.p-for-each{
+    ul:nth-of-type(1){
+        li{
+            padding: 120px;
+        }
+    }
+}
+.p-imghover--01{
+    a{
+        overflow: hidden;
+        img {
+            transform: scale(1.0);
+            transition: .6s $ease-out-expo;
+        }
+        &:hover img {
+            transform: scale(1.1);
+            transition: .6s $ease-out-expo;
+        }
+    }
+}
+.p-icon{
+    li i{
+        margin: auto;
+        display: block;
+        &:before{
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+.p-animation{
+    p{
+        height: 100px; 
+        text-align: center;
+        margin-bottom: 24px; 
+        line-height: 100px;
+    }
+    span{
+        height: 100px;
+        color: $white;
+        display: block;
+        background: $main;
+    }
+}
+
+
+//svg
+
+.p-svg{
+    &__02 {
+        &--hair{
+            stroke: none;
+            fill: $key;
+        }
+        &--body{
+            stroke: #333;
+            fill: none;
+        }
+    }
+    &__03 {
+        &--hair{
+            stroke: none;
+            fill: $key;
+        }
+        &--body{
+            stroke: #333;
+            fill: none;
+        }
+    }
+}

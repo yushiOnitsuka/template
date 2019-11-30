@@ -1,0 +1,33 @@
+//each
+
+$items: a,b,c;
+@each $item in $items {
+    .c-each_bg--#{$item} {
+        background: url(../img/#{$item}_bg.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+}
+
+
+//for
+
+@for $item from 1 through 3 {
+    .c-for-icon--0#{$item} {
+        padding-left: 64px;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            top: 8px;
+            left: 0;
+            margin: auto;
+            background: url(../img/#{$item}_icon.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+
+

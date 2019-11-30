@@ -1,0 +1,117 @@
+.c-scroll--01 {
+  .c-flex{
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border: solid 1px $main;
+    border-radius: 50%;
+    p {
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+  }
+  .c-scroll__bar {
+    width: 1px;
+    height: 64px;
+    margin: -32px auto 0;
+    position: relative;
+    background: $white;
+    opacity: .5;
+    display: block;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 0;
+      margin: 0 auto;
+      background-color: $main;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: scroll-01 2.5s ease 0s infinite normal;
+    }
+  }
+}
+
+.c-scroll--02 {
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+  p{
+    color: $main;
+    text-align: end;
+    font-size: 1.4;
+    transform: rotate(90deg);
+  }
+  .c-scroll__bar {
+    width: 1px;
+    height: 48px;
+    margin: 32px auto 0;
+    position: relative;
+    &:after {
+        content: '';
+        width: 1px;
+        display: block;
+        height: 0;
+        margin: 0 auto;
+        background-color: $main;
+        top: 0;
+        left: 0;
+        animation: scroll-01 2.5s ease 0s infinite normal;
+    }
+  }
+}
+
+.c-scroll--03 {
+  width: 80px;
+  box-sizing: border-box;
+  margin: auto;
+    position: relative;
+    padding: 40px;
+    border: solid 1px $main;
+    border-radius: 50%;
+    display: block;
+    div {
+      position: absolute;
+      top: 0px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    span {
+        width: 8px;
+        height: 8px;
+        border-left: 1px solid $main;
+        border-bottom: 1px solid $main;
+        transform: rotate(-45deg);
+        animation: scroll-02 2s infinite $ease-out-expo;;
+        opacity: 0;
+        box-sizing: border-box;
+        @for $arrow from 1 through 3 {
+          &:nth-of-type(#{$arrow}) {
+            animation-delay: ($arrow - 1) * .15s ;
+            top: ($arrow - 1) * 16px;
+          }
+        }
+      }
+}
+
+
+@keyframes scroll-01 {
+  0%{height: 0;}
+  100%{height: 100%;}
+}
+
+
+@keyframes scroll-02 {
+  0% {opacity: 0; }
+  50% {opacity: 1;}
+  100% { opacity: 0;}
+} 
